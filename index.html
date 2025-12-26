@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ゆりか</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: black;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    .yurika {
+      position: absolute;
+      color: white;
+      font-size: 24px;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+      user-select: none;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<script>
+  function addYurika() {
+    const text = document.createElement("div");
+    text.className = "yurika";
+    text.textContent = "ゆりか";
+
+    // ランダム位置
+    const x = Math.random() * (window.innerWidth - 80);
+    const y = Math.random() * (window.innerHeight - 40);
+
+    text.style.left = x + "px";
+    text.style.top = y + "px";
+
+    document.body.appendChild(text);
+  }
+
+  // 最初から少しずつ増える
+  setInterval(addYurika, 300);
+</script>
+
+</body>
+</html>
