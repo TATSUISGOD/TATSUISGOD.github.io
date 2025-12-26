@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <titleInfinityrobux</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    form, .post {
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .admin-button {
+      background-color: #f44336;
+    }
+    .admin-button:hover {
+      background-color: #e53935;
+    }
+    .post-list {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Write your ID and password/h1>
+
+  <!-- ユーザー投稿フォーム -->
+  <section>
+    <h2>投稿フォーム</h2>
+    <form action="/submit-post" method="POST">
+      <label for="name">名前:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="message">メッセージ:</label>
+      <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+      <button type="submit">投稿する</button>
+    </form>
+  </section>
+
+  <!-- ユーザー投稿の表示 -->
+  <section>
+    <h2>投稿一覧</h2>
+    <div id="posts" class="post-list">
+      <div class="post">
+        <p><strong>john:</strong> Hello!</p>
+      </div>
+      <div class="post">
+        <p><strong>jack:</strong> This site is very useful</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 管理者専用ページ（ログインフォーム） -->
+  <section>
+    <h2>管理者専用ログイン</h2>
+    <form action="/admin-login" method="POST">
+      <label for="adminUsername">管理者ユーザー名:</label>
+      <input type="text" id="adminUsername" name="adminUsername" required><br><br>
+
+      <label for="adminPassword">TT67:</label>
+      <input type="password" id="adminPassword" name="adminPassword" required><br><br>
+
+      <button type="submit">ログイン</button>
+    </form>
+  </section>
+
+  <!-- 管理者ダッシュボード（仮） -->
+  <section>
+    <h2>管理者ダッシュボード（仮）</h2>
+    <div id="admin-dashboard">
+      <div class="post">
+        <p><strong>john:</strong> Hello!</p>
+        <button class="admin-button">削除</button>
+        <button class="admin-button">編集</button>
+      </div>
+      <div class="post">
+        <p><strong>jack:</strong> This site is very useful!</p>
+        <button class="admin-button">削除</button>
+        <button class="admin-button">編集</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
