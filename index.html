@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sound Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 60px;
+    }
+    h1 {
+      color: #38bdf8;
+    }
+    button {
+      font-size: 20px;
+      padding: 15px 30px;
+      border-radius: 10px;
+      border: none;
+      background: #22c55e;
+      color: #022c22;
+      cursor: pointer;
+    }
+    button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sound Button Game 🎮</h1>
+  <p>Tap the button to play a sound</p>
+
+  <button onclick="playSound()">PLAY SOUND</button>
+
+  <!-- 効果音 -->
+  <audio id="sound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-retro-jump-223.wav"></audio>
+
+  <script>
+    function playSound() {
+      document.getElementById("sound").currentTime = 0;
+      document.getElementById("sound").play();
+    }
+  </script>
+
+</body>
+</html>
