@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Infinityrobux Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #e5e7eb;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #38bdf8;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 15px 30px;
+      margin: 15px;
+      border: none;
+      border-radius: 10px;
+      background-color: #22c55e;
+      color: black;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎮 Infinityrobux Game</h1>
+  <p>Tap the button to play a sound!</p>
+
+  <button onclick="playSound()">🔊 Play Sound</button>
+
+  <!-- 効果音 -->
+  <audio id="sound">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_aa4c3b35b0.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function playSound() {
+      const sound = document.getElementById("sound");
+      sound.currentTime = 0;
+      sound.play();
+    }
+  </script>
+
+</body>
+</html>
